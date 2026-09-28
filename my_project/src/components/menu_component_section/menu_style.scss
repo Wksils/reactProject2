@@ -1,0 +1,109 @@
+@use '../layoutMixin' as lm;
+
+.menu{
+    @extend %base-layout;
+    height: 220vh;
+    .container{
+        @include lm.container-layout-column(80%, 90%);
+        align-items: center;
+        h2{
+            color: #311F09;
+            font-size: 5rem;
+        }
+        .positions{
+            @include lm.container-layout-column(100%, 75%);
+            align-items: center;
+            .btns{
+                @include lm.container-layout(90%, 7%);
+                button{
+                    width: 17%;
+                    height: 90%;
+                    border: none;
+                    border-radius: 45px;
+                    background-color: #FAFAF9;
+                    color: #311F09;
+                    font-size: 1.5rem
+                }
+                :first-child{
+                    width: 23%;
+                    background-color: #311F09;
+                    color: #FAFAF9;
+                }
+            }
+            .food{
+                @include lm.container-layout-column(100%, 90%);
+                align-items: center;
+                .cards{
+                    @include lm.container-layout(90%, 48%);
+                    .card{
+                        @include lm.container-layout-column(31%, 100%);
+                        justify-content: space-evenly;
+                        align-items: center;
+                        background-color: #FAFAF9;
+                        border-radius: 35px;
+                        :first-child{height: 50%; width: auto;}
+                        h3{
+                            font-size: 1.9rem;
+                            color: #311F09;
+                        }
+                        img{width: 45%; height: auto;}
+                        p{
+                            width: 83%;
+                            text-align: center;
+                            line-height: 2;
+                        }
+                        div{
+                            @include lm.container-layout(80%, 12%);
+                            button{
+                                width: 57%;
+                                height: 80%;
+                                border: none;
+                                background-color: #FF8A00;
+                                border-radius: 50px;
+                                color: white;
+                                font-size: 1.1rem;
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+        .pageBtns{
+            @include lm.container-layout(40%, 5%);
+            button{
+                font-size: 3rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .brown{
+                height: 82%;
+                width: 12%;
+                border: none;
+                border-radius: 20px;
+                background-color: #311F09;
+                color: #FAFAF9;
+                font-weight: 400;
+            }
+            div{
+                @include lm.container-layout(60%, 82%);
+                button{
+                    height: 90%;
+                    width: 20%;
+                    border: none;
+                    background-color: #FFE8CC;
+                    color: #FF8A00;
+                    font-size: 1.5rem;
+                    border-radius: 20px;
+                }
+                .gray{
+                    background-color: #FAFAF9;
+                    color: #B7A28B;
+                    font-size: 3rem;
+                }
+            }
+        }
+        
+    }
+}

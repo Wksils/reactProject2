@@ -5,7 +5,25 @@
     height: 100vh;
     background-color: #ECF9F0;
     .container{
-        @include lm.container-layout(80%, 80%);
-        
+        @include lm.container-layout(85%, 80%);
+        .leftContainer{
+            width: 60%; 
+            height: 100%;
+            img{width: 95%;height: 100%;}
+        }
+        .rightContainer{
+            @include lm.container-layout-column(35%, 90%);
+            h2{font-size: 7rem;}
+            p{font-size: 1.65rem;}
+            button{
+                background-color: #FF8A00;
+                border: none;
+                border-radius: 50px;
+                color: white;
+                font-size: 1.8rem;
+                width: 60%;
+                height: 13%;
+            }
+        }
     }
 }
