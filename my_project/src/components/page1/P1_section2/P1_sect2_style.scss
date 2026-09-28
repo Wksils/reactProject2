@@ -1,0 +1,11 @@
+@use '../../layoutMixin.scss' as lm;
+
+.P1_sect2{
+    @extend %base-layout;
+    height: 100vh;
+    background-color: #ECF9F0;
+    .container{
+        @include lm.container-layout(80%, 80%);
+        
+    }
+}

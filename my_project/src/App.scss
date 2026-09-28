@@ -4,3 +4,15 @@
 /* Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 /* Tinos */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{font-family: 'Poppins', sans-serif;}
+h1{
+    font-family: 'Raleway', sans-serif;
+    color: #311F09;
+}
+p{font-family: 'Poppins', sans-serif; color: #5C4529;}
+button{font-family: 'Poppins', sans-serif;}

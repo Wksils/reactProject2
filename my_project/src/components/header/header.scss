@@ -1,0 +1,38 @@
+@use '../layoutMixin.scss' as lm;
+a{font-family: 'Poppins', sans-serif;}
+header{
+    width: 100vw;
+    height: 15vh; 
+    @extend %base-layout;
+    nav{
+        @include lm.container-layout(80%, 80%);
+        .logo{
+            @include lm.container-layout(10%, 100%);
+            img{width: 45%; height: auto;}
+        }
+        .navigation{
+            @include lm.container-layout(55%, 100%);
+            a{
+                text-decoration: none;
+                font-size: 1.1rem;
+                color: black;
+            }
+            a:hover{color: #FF8A00;}
+        }
+        .cartAndLogIn{
+            @include lm.container-layout(15%, 100%);
+            img{
+                width: 30%;
+                height: auto;
+            }
+            button{
+                border: none;
+                background-color: #3FA72F;
+                color: white;
+                width: 60%;
+                height: 50%;
+                border-radius: 35px;
+            }
+        }
+    }
+}
