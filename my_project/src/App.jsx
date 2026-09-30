@@ -4,6 +4,7 @@ import Header from './components/header/header'
 import Page1 from './pages/page1/page1'
 import Page2 from './pages/page2/page2'
 import Page3 from './pages/page3/page3'
+import Footer from './components/footer/footer'
 
 
 export default function App() {
@@ -16,6 +17,7 @@ export default function App() {
           <Route path='/Page2'  element = {<Page2/>}/>
           <Route path='/Page3'  element = {<Page3/>}/>
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </>
   )
