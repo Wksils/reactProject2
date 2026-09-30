@@ -1,5 +1,6 @@
 import './footer.scss'
 import {Photo} from '../../Photo.js'
+import { Link } from 'react-router-dom'
 
 export default function Footer(){
     return(
@@ -9,7 +10,7 @@ export default function Footer(){
                     <div className='right'>
                         <div className='logo'>
                             <img src={Photo.Logo} alt="" />
-                            <img src={Photo.Delizioso} alt="" />
+                            <p>Delizi<span style={{color: '#FF8A00'}}>ozo</span></p>
                         </div>
                         <p>Viverra gravida morbi egestas facilisis tortor netus non duis tempor. </p>
                         <div className='links'>

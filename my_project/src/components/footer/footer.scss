@@ -1,0 +1,61 @@
+@use '../layoutMixin.scss' as lm;
+
+footer{
+    a{font-family: 'Poppins', 
+    sans-serif; 
+    color: #E3E2E0;
+    text-decoration: none;
+}
+p{color: #E3E2E0; font-size: 1.3rem; font-weight: 300;}
+li{color: #E3E2E0; font-size: 1.5rem; font-weight: 300;}
+    @extend %base-layout;
+    height: 80vh;
+    background-color: #311F09;
+    flex-direction: column;
+    gap: 3%;
+    .top{
+        @include lm.container-layout(80%, 60%);
+        align-items: start;
+        .right{
+            @include lm.container-layout-column(30%, 80%);
+            .logo{
+                @include lm.container-layout(33%, 20%);
+                p{font-size: 1.2rem;}
+            }
+            p{font-size: 1.7rem; line-height: 2; font-weight: 300;}
+            .links{
+                @include lm.container-layout(50%, 15%);
+            }
+        }
+        .left{
+            @include lm.container-layout(60%, 100%);
+            align-items: start;
+            .info{
+                @include lm.container-layout-column(25%, 80%);
+                justify-content: start;
+                gap: 10%;
+                p{
+                    color: #FF8A00;
+                    font-weight: 500;
+                    font-size: 1.7rem;
+                }
+                ul{
+                    list-style: none;
+                    @include lm.container-layout-column(100%, 100%);
+                }
+            }
+            .info:nth-child(2){
+                ul{
+                    height: 42%;
+                }
+            }
+            .info:nth-child(3){
+                width: 43%;
+                ul{
+                    height: 45%;
+                    li{font-family: 'Poppins', sans-serif;}
+                }
+            }
+        }
+    }
+}
