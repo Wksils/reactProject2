@@ -1,0 +1,27 @@
+@use '../../layoutMixin.scss' as lm;
+
+.P1_section6{
+    @extend %base-layout;
+    height: 150vh;
+    background-image: url('../../../assets/images/fon.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    .container{
+        @include lm.container-layout-column(80%, 75%);
+        align-items: center;
+        h2{font-size: 6rem;}
+        .nameUser{
+            @include lm.container-layout-column(auto, 6%);
+            align-items: center;
+            .name{color: #311F09; font-weight: 600; font-size: 1.4rem;}
+        }
+        .text{
+            @include lm.container-layout-column(40%, 10%);
+            text-align: center;
+            align-items: center;
+            p{width: 85%; font-size: 1.2rem; }
+            .asd{font-size: 5rem; width: auto; font-family: 'Tinos', sans-serif; align-self: end;}
+            .asd:first-child{align-self: start;}
+        }
+    }
+}

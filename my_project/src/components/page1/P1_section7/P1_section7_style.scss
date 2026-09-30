@@ -1,0 +1,43 @@
+@use '../../layoutMixin.scss' as lm;
+
+.P1_section7{
+    @extend %base-layout;
+    height: 100vh;
+    .container{
+        @extend %base-layout;
+        width: 80%;
+        height: 70%;
+        align-items: center;
+        background-image: url('../../../assets/images/Background.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        .info{
+            @include lm.container-layout-column(80%, 70%);
+            align-items: center;
+            h2{color: white; font-size: 6rem;}
+            p{color: white; font-weight: 500; font-size: 3rem;}
+            .time{
+                @include lm.container-layout-column(35%, 28%);
+                align-items: end;
+                p{font-weight: 400; font-size: 1.4rem;}
+            }
+            .btns{
+                @include lm.container-layout(45%, 15%);
+                button{
+                    background-color: #FF8A00;
+                    border: none;
+                    border-radius: 50px;
+                    color: white;
+                    font-size: 1.4rem;
+                    width: 45%;
+                    height: 100%;
+                }
+                button:last-child{
+                    color: #311F09;
+                    background-color: white;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
