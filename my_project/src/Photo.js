@@ -21,6 +21,9 @@ import salad from "./assets/images/salad.png"
 import table from "./assets/images/table.png"
 import twitter from "./assets/images/twitter.png"
 import users_div from "./assets/images/users_div.png"
+import breakfast from "./assets/images/breakfast.png"
+import cooking from "./assets/images/cooking.png"
+import owner from "./assets/images/owner.png"
 
 export const Photo = {
     Bacgraund:Bacgraund,
@@ -45,5 +48,8 @@ export const Photo = {
     salad:salad,
     table:table,
     twitter:twitter,
-    users_div:users_div
+    users_div:users_div,
+    breakfast:breakfast,
+    cooking:cooking,
+    owner:owner
 }

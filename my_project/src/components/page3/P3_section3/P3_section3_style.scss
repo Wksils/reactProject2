@@ -1,0 +1,41 @@
+@use '../../layoutMixin.scss' as lm;
+
+.P3_section3{
+    @extend %base-layout;
+    height: 100vh;
+    .container{
+        @include lm.container-layout(70%, 80%);
+        .left{
+            @include lm.container-layout-column(45%, 81%);
+            h2{
+                font-size: 5rem;
+                width: 90%;
+            }
+            .black{
+                font-weight: 600;
+                font-size: 2.5rem;
+                color: black;
+            }
+            div{
+                @include lm.container-layout-column(70%, 50%);
+                .asd{
+                    color: #FFE8CC;
+                    font-size: 6rem;
+                    font-family: 'Tinos', sans-serif;
+                    height: 25%;
+                    width: auto;
+                }:last-child{
+                    align-self: end;
+                    height: 25%;
+                }
+                .text{
+                    font-size: 1.5rem;
+                    font-style: italic;
+                    line-height: 2;
+                    width: 100%;
+                    margin-top: 5%;
+                }
+            }
+        }
+    }
+}

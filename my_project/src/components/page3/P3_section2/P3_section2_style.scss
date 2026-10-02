@@ -1,6 +1,6 @@
 @use '../../layoutMixin.scss' as lm;
 
-.P3_section1{
+.P3_section2{
     @extend %base-layout;
     height: 100vh;
     .container{
@@ -8,20 +8,22 @@
         .photo{
             width: 50%;
             height: 100%;
+            align-self: start;
+
             img{
                 width: 100%;
                 height: auto;
             }
         }
-        .left{
-            @include lm.container-layout-column(40%, 70%);
-            h2{
-                font-size: 6rem;
-                width: 60%;
-            }
+        .right{
+            width: 40%;
+            height: 50%;
+            display: flex;
+            justify-content: end;
+            align-items: center;
             p{
                 font-size: 1.3rem;
-                width: 65%;
+                width: 60%;
                 line-height: 2;
             }
         }
