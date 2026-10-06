@@ -12,38 +12,130 @@ export default function P1_section6(){
             <section className='P1_section6'>
                 <div className='container'>
                     <h2>Our customers say</h2>
-                    <div>
+                    <div className='dsa'>
                         <Swiper
                             slidesPerView={1}
                             spaceBetween={30}
                             loop={true}
-                            pagination={{
-                            clickable: true,
-                            }}
-                            navigation={true}
+                            pagination={false}
+                            navigation={false}
                             modules={[Pagination, Navigation]}
                             className="mySwiper"
+                            initialSlide={3}
                         >
-                            <SwiperSlide>Slide 1</SwiperSlide>
-                            <SwiperSlide>Slide 2</SwiperSlide>
-                            <SwiperSlide>Slide 3</SwiperSlide>
-                            <SwiperSlide>Slide 4</SwiperSlide>
-                            <SwiperSlide>Slide 5</SwiperSlide>
-                            <SwiperSlide>Slide 6</SwiperSlide>
-                            <SwiperSlide>Slide 7</SwiperSlide>
+                            <SwiperSlide>
+                                <div className='cont'>
+                                    <div className='mainUser'>
+                                        <img src={Photo.usOne} alt="" />
+                                    </div>
+                                    <div className='nameUser'>
+                                        <p className='name'>Masha Vasha</p>
+                                        <p>Cool girl</p>
+                                    </div>
+                                    <div className='text'>
+                                        <p className='asd'>“</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisis ultricies at eleifend proin. Congue nibh nulla malesuada ultricies nec quam </p>
+                                        <p className='asd'>“</p>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div className='cont'>
+                                    <div className='mainUser'>
+                                        <img src={Photo.usTwo} alt="" />
+                                    </div>
+                                    <div className='nameUser'>
+                                        <p className='name'>Stacy Star</p>
+                                        <p>DJ</p>
+                                    </div>
+                                    <div className='text'>
+                                        <p className='asd'>“</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisis ultricies at eleifend proin. Congue nibh nulla malesuada ultricies nec quam </p>
+                                        <p className='asd'>“</p>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div className='cont'>
+                                    <div className='mainUser'>
+                                        <img src={Photo.usThree} alt="" />
+                                    </div>
+                                    <div className='nameUser'>
+                                        <p className='name'>Olga Fire</p>
+                                        <p>Financial advisor</p>
+                                    </div>
+                                    <div className='text'>
+                                        <p className='asd'>“</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisis ultricies at eleifend proin. Congue nibh nulla malesuada ultricies nec quam </p>
+                                        <p className='asd'>“</p>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                               <div className='cont'>
+                                    <div className='mainUser'>
+                                        <img src={Photo.main_user} alt="" />
+                                    </div>
+                                    <div className='nameUser'>
+                                        <p className='name'>Starla Virgoun</p>
+                                        <p>Financial advisor</p>
+                                    </div>
+                                    <div className='text'>
+                                        <p className='asd'>“</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisis ultricies at eleifend proin. Congue nibh nulla malesuada ultricies nec quam </p>
+                                        <p className='asd'>“</p>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div className='cont'>
+                                    <div className='mainUser'>
+                                        <img src={Photo.usFour} alt="" />
+                                    </div>
+                                    <div className='nameUser'>
+                                        <p className='name'>Timur Ivanov</p>
+                                        <p>Bro</p>
+                                    </div>
+                                    <div className='text'>
+                                        <p className='asd'>“</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisis ultricies at eleifend proin. Congue nibh nulla malesuada ultricies nec quam </p>
+                                        <p className='asd'>“</p>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div className='cont'>
+                                    <div className='mainUser'>
+                                        <img src={Photo.usFive} alt="" />
+                                    </div>
+                                    <div className='nameUser'>
+                                        <p className='name'>Mimi Yola</p>
+                                        <p>Financial advisor</p>
+                                    </div>
+                                    <div className='text'>
+                                        <p className='asd'>“</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisis ultricies at eleifend proin. Congue nibh nulla malesuada ultricies nec quam </p>
+                                        <p className='asd'>“</p>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div className='cont'>
+                                    <div className='mainUser'>
+                                        <img src={Photo.usSix} alt="" />
+                                    </div>
+                                    <div className='nameUser'>
+                                        <p className='name'>Sara Jons</p>
+                                        <p>Financial advisor</p>
+                                    </div>
+                                    <div className='text'>
+                                        <p className='asd'>“</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisis ultricies at eleifend proin. Congue nibh nulla malesuada ultricies nec quam </p>
+                                        <p className='asd'>“</p>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
                         </Swiper>
-                    </div>
-                    <div className='mainUser'>
-                        <img src={Photo.main_user} alt="" />
-                    </div>
-                    <div className='nameUser'>
-                        <p className='name'>Starla Virgoun</p>
-                        <p>Financial advisor</p>
-                    </div>
-                    <div className='text'>
-                        <p className='asd'>“</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisis ultricies at eleifend proin. Congue nibh nulla malesuada ultricies nec quam </p>
-                        <p className='asd'>“</p>
                     </div>
                     <div className='users'>
                         <img src={Photo.users_div} alt="" />

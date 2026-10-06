@@ -24,6 +24,12 @@ import users_div from "./assets/images/users_div.png"
 import breakfast from "./assets/images/breakfast.png"
 import cooking from "./assets/images/cooking.png"
 import owner from "./assets/images/owner.png"
+import usOne from "./assets/images/usOne.png"
+import usTwo from "./assets/images/usTwo.png"
+import usThree from "./assets/images/usThree.png"
+import usFour from "./assets/images/usFour.png"
+import usFive from "./assets/images/usFive.png"
+import usSix from "./assets/images/usSix.png"
 
 export const Photo = {
     Bacgraund:Bacgraund,
@@ -51,5 +57,11 @@ export const Photo = {
     users_div:users_div,
     breakfast:breakfast,
     cooking:cooking,
-    owner:owner
+    owner:owner,
+    usOne:usOne,
+    usTwo:usTwo,
+    usThree:usThree,
+    usFour:usFour,
+    usFive:usFive,
+    usSix:usSix
 }
