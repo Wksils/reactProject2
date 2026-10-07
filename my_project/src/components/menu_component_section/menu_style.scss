@@ -33,8 +33,10 @@
             .food{
                 @include lm.container-layout-column(100%, 90%);
                 align-items: center;
-                .cards{
+                .topCards, .nizCards{
                     @include lm.container-layout(90%, 48%);
+                    justify-content: start;
+                    gap: 48.4px;
                     .card{
                         @include lm.container-layout-column(31%, 100%);
                         justify-content: space-evenly;

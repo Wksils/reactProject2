@@ -7,21 +7,33 @@ export default function Menu({title}){
     const [visibItems, setVisibleItems] = useState([])
 
     const items = [
-        {id:1, img: Photo.position1, title: "Spaghetti", category: ""},
-        {id:2, img: Photo.position2, title: "Gnocchi", category: ""},
-        {id:3, img: Photo.position3, title: "Rovioli", category: ""},
-        {id:4, img: Photo.position4, title: "Penne Alla Vodak", category: ""},
-        {id:5, img: Photo.position5, title: "Risoto", category: ""},
-        {id:6, img: Photo.position6, title: "Splitza Signature", category: ""}
+        {id:1, img: Photo.position1, title: "Spaghetti", category: "Lunch"},
+        {id:2, img: Photo.position2, title: "Gnocchi", category: "Dinner"},
+        {id:3, img: Photo.position3, title: "Rovioli", category: "Lunch"},
+        {id:4, img: Photo.position4, title: "Penne Alla Vodak", category: "Dinner"},
+        {id:5, img: Photo.position5, title: "Risoto", category: "Lunch"},
+        {id:6, img: Photo.position6, title: "Splitza Signature", category: "Lunch"}
     ]
 
-    useEffect(() =>{
-        if(activeTab === 'All category'){
-            setVisibleItems(items)
-        }else{
-            setVisibleItems(items.filter(item => item.category === activeTab))
-        }
-    },[activeTab])
+    const filteredItems = activeTab === 'All Category' 
+    ? items 
+    : items.filter(item => item.category === activeTab);
+
+  const topThree = filteredItems.slice(0, 3);
+  const restItems = filteredItems.slice(3);
+
+  const renderCard = (item) => (
+    <div className='card' key={item.id}>
+      <img src={item.img} alt={item.title} /> 
+      <h3>{item.title}</h3>
+      <img src={Photo.Rating} alt="Rating" />
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <div>
+        <h3>$12.05</h3>
+        <button>Order now</button>
+      </div>
+    </div>
+  );
     return(
         <>
             <section className='menu'>
@@ -36,69 +48,11 @@ export default function Menu({title}){
                             <button onClick={() => SetActiveTab("Drink")}>Drink</button>
                         </div>
                         <div className='food'>
-                            <div className='cards'>
-                                <div className='card'>
-                                    <img src={Photo.position1} alt="" />
-                                    <h3>Spaghetti</h3>
-                                    <img src={Photo.Rating} alt="" />
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam. </p>
-                                    <div>
-                                        <h3>$12.05</h3>
-                                        <button>Order now</button>
-                                    </div>
-                                </div>
-                                <div className='card'>
-                                    <img src={Photo.position2} alt="" />
-                                    <h3>Gnocchi</h3>
-                                    <img src={Photo.Rating} alt="" />
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam. </p>
-                                    <div>
-                                        <h3>$12.05</h3>
-                                        <button>Order now</button>
-                                    </div>
-                                </div>
-                                <div className='card'>
-                                    <img src={Photo.position3} alt="" />
-                                    <h3>Rovioli</h3>
-                                    <img src={Photo.Rating} alt="" />
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam. </p>
-                                    <div>
-                                        <h3>$12.05</h3>
-                                        <button>Order now</button>
-                                    </div>
-                                </div>
+                            <div className='topCards'>
+                                 {topThree.map(item => renderCard(item))}
                             </div>
-                            <div className='cards'>
-                                <div className='card'>
-                                    <img src={Photo.position4} alt="" />
-                                    <h3>Penne Alla Vodak</h3>
-                                    <img src={Photo.Rating} alt="" />
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam. </p>
-                                    <div>
-                                        <h3>$12.05</h3>
-                                        <button>Order now</button>
-                                    </div>
-                                </div>
-                                <div className='card'>
-                                    <img src={Photo.position5} alt="" />
-                                    <h3>Risoto</h3>
-                                    <img src={Photo.Rating} alt="" />
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam. </p>
-                                    <div>
-                                        <h3>$12.05</h3>
-                                        <button>Order now</button>
-                                    </div>
-                                </div>
-                                <div className='card'>
-                                    <img src={Photo.position6} alt="" />
-                                    <h3>Splitza Signature</h3>
-                                    <img src={Photo.Rating} alt="" />
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam. </p>
-                                    <div>
-                                        <h3>$12.05</h3>
-                                        <button>Order now</button>
-                                    </div>
-                                </div>
+                            <div className='nizCards'>
+                                {restItems.map(item => renderCard(item))}
                             </div>
                         </div>
                     </div>

@@ -5,6 +5,7 @@ import P1_section4 from '../../components/page1/P1_section4/P1_section4'
 import P1_section5 from '../../components/page1/P1_section5/P1_section5'
 import P1_section6 from '../../components/page1/P1_section6/P1_section6'
 import P1_section7 from '../../components/page1/P1_section7/P1_section7'
+import P1_section8 from '../../components/page1/P1_section8_faq/faq'
 
 export default function Page1(){
     return(
@@ -16,6 +17,7 @@ export default function Page1(){
             <P1_section5/>
             <P1_section6/>
             <P1_section7/>
+            <P1_section8/>
         </>
     )
 }
